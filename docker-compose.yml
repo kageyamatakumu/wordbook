@@ -4,8 +4,11 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    volumes:
+      - /path/on/host:/go/src/app
     ports:
       - 8080:8080
+    command: ash -c "go build -o main . && ./main"
     depends_on:
       - database
   frontend:

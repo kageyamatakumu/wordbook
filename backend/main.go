@@ -20,7 +20,7 @@ func main() {
 
 	// ルートエンドポイントのハンドラ
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello!")
+		return c.String(http.StatusOK, "Hello World!")
 	})
 
 	// API通信が正常に行えるか確認
